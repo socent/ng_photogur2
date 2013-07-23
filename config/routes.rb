@@ -8,14 +8,6 @@ NgPhotogur::Application.routes.draw do
   root :to => "static#root"
   match '*anything' => "static#root"
 
-  $routeProvider
-    .when("/",                  templateUrl: "pictures/index")
-    .when('/pictures',          templateUrl: "pictures/index")
-    .when('/pictures/:id',      templateUrl: "pictures/show")
-    .when('/pictures/new',      templateUrl: "pictures/new")
-    .when('/pictures/:id/edit', templateUrl: "pictures/edit")
-    .otherwise(template: "Page not found.")
-  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
