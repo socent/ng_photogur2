@@ -6,5 +6,5 @@ app.config(function ($routeProvider) {
         .when('/pictures',
             {
                 controller: 'StaticController',
-                templateUrl: '/app/javascript/templates/pictures/index.hamlc',
+                templateUrl: '/app/assets/templates/context.js.coffee',
             })

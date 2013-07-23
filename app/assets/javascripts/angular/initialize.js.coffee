@@ -1,0 +1,1 @@
+@photogur = angular.module 'photogur', []
