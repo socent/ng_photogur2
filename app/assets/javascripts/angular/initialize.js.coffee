@@ -22,6 +22,7 @@
   .when('/pictures/:id/edit', templateUrl: "pictures/edit")
   .otherwise(template: "Page not found.")
 
+  
   @photogur.run ['$window', '$templateCache', ($window, $templateCache) ->
   # Load the hamlc templates into the angular template cache when angular 
   # starts up. This means angular doesn't need to download each template from 
