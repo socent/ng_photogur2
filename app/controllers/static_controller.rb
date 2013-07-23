@@ -1,5 +1,4 @@
 class StaticController < ApplicationController
-	def root
-		
+	def root	
 	end
 end
