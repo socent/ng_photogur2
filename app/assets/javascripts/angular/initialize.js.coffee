@@ -22,17 +22,15 @@ $routeProvider
   .otherwise(template: "Page not found.")
 
 
-@photogur.run ['$window', '$templateCache', ($window, $templateCache) ->
-  # Load the hamlc templates into the angular template cache when angular
-  # starts up. This means angular doesn't need to download each template from
-  # the server when a page is requested.
-  for name, templateFunction of $window.JST
-    $templateCache.put(name, templateFunction)
-  ]
+# @photogur.run ['$window', '$templateCache', ($window, $templateCache) ->
+#   # Load the hamlc templates into the angular template cache when angular
+#   # starts up. This means angular doesn't need to download each template from
+#   # the server when a page is requested.
+#   for name, templateFunction of $window.JST
+#     $templateCache.put(name, templateFunction)
+#   ]
 
 # Store the picture data in a factory so that the data can be injected into
 # many controllers
 @photogur.factory "Picture", ($resource) ->
   $resource "/api/v1/pictures/:id", {id: "@id"}, {update: {method: "PUT"}}
-
-

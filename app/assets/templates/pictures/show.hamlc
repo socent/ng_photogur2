@@ -1,4 +1,6 @@
 
-.picture{:"ng-show" => "picture in pictures"}
-  %h1 {{picture.title}}
-  %img{:src => "{{picture.url}}"}
+
+%h1
+  {{picture.title}}
+  %a.edit-btn.btn.pull-right{:ng-href => "/pictures/{{id}}/edit"} Edit
+%img{:src => "{{picture.url}}"}

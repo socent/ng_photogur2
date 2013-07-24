@@ -12,6 +12,5 @@
       %h2 {{picture.title}}
   .row
     .span12
-      %a{:"ng-href" => "/pictures/{{$index}}"}
-        %img{"src => "{{picture.url}}""}
-
+      %a{:"ng-href" => "/pictures/{{picture.id}}"}
+        %img{"src => "{{picture.url}}"}
