@@ -21,6 +21,7 @@ end
 
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 2.3.1.2'
+gem 'font-awesome-sass-rails'
 
 gem 'factory_girl_rails'
 gem 'rb-fsevent', '~> 0.9.1'

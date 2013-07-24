@@ -1,4 +1,3 @@
-/ %a{:href => "/picture.id"} Picture
 
 .picture{:"ng-show" => "picture in pictures"}
   %h1 {{picture.title}}

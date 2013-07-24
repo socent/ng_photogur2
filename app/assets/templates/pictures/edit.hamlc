@@ -1,3 +1,4 @@
+
 .row
   .span6
     %h1 Editing {{picture.title}}
@@ -7,17 +8,16 @@
         %input{:type => "text", :ng-model => "picture.title"}
       %p
         %label Author
-        %input{:type => "text", :ng-model => "picture.title"}
+        %input{:type => "text", :ng-model => "picture.author"}
       %p
         %label URL
-        %input{:type => "text", :ng-model => "picture.title"}
+        %input{:type => "text", :ng-model => "picture.url"}
 
-      %p 
-        %input{:type => "submit", :ng-click => "updatePicture()"}
-
+      .form-actions
+        %input.btn.btn-primary{:type => "submit"}
 
   .span6
-    .well{:ng-show => "picture.artist" || "picture.title" || "picture.url"}
+    .well{:ng-show => "picture.author || picture.title || picture.url"}
       %h2 {{picture.title}}
-      %p{:ng-show => "picture.artist"}
-      
+      %p{:ng-show => "picture.author"} by {{picture.author}}
+      %img{:ng-src => "{{picture.url}}"}

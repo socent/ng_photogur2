@@ -1,5 +1,3 @@
-/ <!-- clicking on "Back to Pictures" takes you to the path pictures_url, which is /picture -->
-/ <%= link_to "Back to Pictures", pictures_url %>
 
 .row
 	.span6
@@ -16,10 +14,11 @@
 		    %label URL
 		    %input{:type => "text", :ng-model => "picture.url"}
 
-		  %p 
+		  %p
 		    %input{:type => "submit", :ng-click => "createPicture()"}
 
-/ .span6
-/ 	.well{:ng-show => "picture.artist" || "picture.title" || "picture.url"}
-/ 	  %h2 {{picture.title}}
-/ 	  %p{:ng-show => "picture.artist"}
+.span6
+	.well{:ng-show => "picture.author || picture.title || picture.url"}
+	  %h2 {{picture.title}}
+	  %p{:ng-show => "picture.author"} by {{picture.author}}
+	  %img{:ng-src => "{{picture.url}}"}
