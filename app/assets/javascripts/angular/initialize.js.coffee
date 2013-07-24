@@ -1,6 +1,5 @@
 @photogur = angular.module 'photogur', ["ngResource"]
 
-
 @photogur.config ($routeProvider, $locationProvider) ->
 
   # Enable HTML5 history support. For browsers that support HTML5 history this 
@@ -34,21 +33,7 @@ $routeProvider
 
 # Store the picture data in a factory so that the data can be injected into
 # many controllers
-@photogur.factory 'Pictures', ->
-  [
-    {
-      title : "The old church on the coast of White sea"
-      artist: "Sergey Ershov"
-      url   : "http://monicao.s3.amazonaws.com/bitmaker/house.jpg"
-    }
-    {
-      title : "Sea Power"
-      artist: "Stephen Scullion"
-      url   : "http://monicao.s3.amazonaws.com/bitmaker/wave.jpg"
-    }
-    {
-      title : "Into the Poppies"
-      artist: "John Wilhelm"
-      url   : "http://monicao.s3.amazonaws.com/bitmaker/girl.jpg"
-    }
-  ]
+@photogur.factory "Picture", ($resource) ->
+  $resource "/api/v1/pictures/:id", {id: "@id"}, {update: {method: "PUT"}}
+
+  
