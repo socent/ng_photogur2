@@ -1,1 +1,12 @@
-<h1>Show</h1>
+ / <%= link_to "Back to Pictures", pictures_url %> | <%= link_to "Edit", edit_picture_path(@picture) %> | <%= link_to "Delete", @picture, :confirm, :method => :delete %>
+
+%h2 {{picture.title}}
+
+%a{:href => "/pictures/:id"} Picture
+
+.picture{:"ng-show" => "picture in pictures"}
+  %h2 {{picture.title}}
+  %img{:src => "{{picture.url}}"}
+
+/ <p><%= @picture[:title] %>, <%= @picture[:artist] %></p>
+/ <%= image_tag @picture.url %>

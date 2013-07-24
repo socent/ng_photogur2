@@ -1,1 +1,17 @@
-<h1>New</h1>
+/ <!-- clicking on "Back to Pictures" takes you to the path pictures_url, which is /picture -->
+/ <%= link_to "Back to Pictures", pictures_url %>
+
+%h1 New Picture
+%form
+  %p
+    %label Title
+    %input{:type => "text"}
+  %p
+    %label Author
+    %input{:type => "text"}
+  %p
+    %label URL
+    %input{:type => "text"}
+
+  %p 
+    %input{:type => "submit", :ng-click => "createPicture()"}
