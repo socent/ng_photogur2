@@ -14,8 +14,8 @@
 		    %label URL
 		    %input{:type => "text", :ng-model => "picture.url"}
 
-		  %p
-		    %input{:type => "submit", :ng-click => "createPicture()"}
+		  .form-actions
+		    %input.btn.btn-primary{:type => "submit", :ng-click => "createPicture()"}
 
 .span6
 	.well{:ng-show => "picture.author || picture.title || picture.url"}
