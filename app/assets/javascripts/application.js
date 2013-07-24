@@ -19,5 +19,7 @@
 //= require hamlcoffee
 
 // APPLICATION FILES
+// require_tree ../templates
 // require ./angular/initialize
+//= require_tree ./angular
 //= require_tree .

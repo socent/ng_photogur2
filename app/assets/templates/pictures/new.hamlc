@@ -1,17 +1,25 @@
 / <!-- clicking on "Back to Pictures" takes you to the path pictures_url, which is /picture -->
 / <%= link_to "Back to Pictures", pictures_url %>
 
-%h1 New Picture
-%form
-  %p
-    %label Title
-    %input{:type => "text"}
-  %p
-    %label Author
-    %input{:type => "text"}
-  %p
-    %label URL
-    %input{:type => "text"}
+.row
+	.span6
+		%h1 New Picture
+		%p Total pictures: {{pictures.length}}
+		%form
+			%p
+		    %label Title
+		    %input{:type => "text", :ng-model => "picture.title"}
+		  %p
+		    %label Author
+		    %input{:type => "text", :ng-model => "picture.author"}
+		  %p
+		    %label URL
+		    %input{:type => "text", :ng-model => "picture.url"}
 
-  %p 
-    %input{:type => "submit", :ng-click => "createPicture()"}
+		  %p 
+		    %input{:type => "submit", :ng-click => "createPicture()"}
+
+/ .span6
+/ 	.well{:ng-show => "picture.artist" || "picture.title" || "picture.url"}
+/ 	  %h2 {{picture.title}}
+/ 	  %p{:ng-show => "picture.artist"}

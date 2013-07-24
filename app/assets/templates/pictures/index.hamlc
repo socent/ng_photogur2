@@ -3,7 +3,3 @@
 .picture{:"ng-repeat" => "picture in pictures"}
   %h2 {{picture.title}}
   %img{:src => "{{picture.url}}"}
-
-%h2{:"ng-show" => "pictures.length > 1"}  There are tons of pictures! ^_^
-%h2{:"ng-show" => "pictures.length == 1"} There is only 1 picture :/
-%h2{:"ng-show" => "pictures.length == 0"} There are no pictures :(
