@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 .row
   .span12
     %a.btn.btn-success{:href =>"/pictures/new"}
