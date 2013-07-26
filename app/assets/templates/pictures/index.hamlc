@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 .row
   .span12
@@ -6,11 +7,10 @@
       New Picture
 
 .picture{:"ng-repeat" => "picture in pictures"}
-
   .row
     .span12
       %h2 {{picture.title}}
   .row
     .span12
       %a{:"ng-href" => "/pictures/{{picture.id}}"}
-        %img{"src => "{{picture.url}}"}
+        %img{:src => "{{picture.url}}"}
