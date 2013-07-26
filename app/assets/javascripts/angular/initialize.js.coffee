@@ -32,5 +32,7 @@ $routeProvider
 
 # Store the picture data in a factory so that the data can be injected into
 # many controllers
+
 @photogur.factory "Picture", ($resource) ->
   $resource "/api/v1/pictures/:id", {id: "@id"}, {update: {method: "PUT"}}
+
