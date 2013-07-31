@@ -1,6 +1,6 @@
 .row
   .span12
-    %a.btn.btn-success{:href =>"/pictures/new"}
+    %a.btn.btn-success{:href => "/pictures/new"}
       %i.icon-plus
       New Picture
 
@@ -10,5 +10,5 @@
       %h2 {{picture.title}}
   .row
     .span12
-      %a{:"ng-href" => "/pictures/{{picture.id}}"}
+      %a{:"ng-href" => "/pictures/{{$index}}"}
         %img{:src => "{{picture.url}}"}
