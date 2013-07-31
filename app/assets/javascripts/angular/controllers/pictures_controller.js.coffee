@@ -1,6 +1,9 @@
-@photogur.controller 'PicturesController', ($scope, $location, Pictures) ->
-  $scope.pictures = Pictures
+@photogur.controller 'PicturesController', ($scope, $location, Picture) ->
+  $scope.pictures = Picture.query()
+ 
+    $scope.createPicture = ->
+      console.log "creating?"
+      new Picture($scope.picture).$save onPictureSave
 
-  $scope.createPicture = ->
-    Pictures.push $scope.picture
-    $location.path('/pictures')
+    onPictureSave = ->
+      $location.path('/pictures')
