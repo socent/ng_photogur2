@@ -14,12 +14,12 @@
 
  # Set up the application routes. This is similar to Rails' /config/routes.rb
 $routeProvider
-  .when("/",                  templateUrl: "pictures/index", controller: "PicturesController")
-  .when('/pictures',          templateUrl: "pictures/index", controller: "PicturesController")
-  .when('/pictures/new',      templateUrl: "pictures/new",   controller: "PicturesController")
-  .when('/pictures/:id',      templateUrl: "pictures/show",  controller: "PictureController")
-  .when('/pictures/:id/edit', templateUrl: "pictures/edit",  controller: "PictureController")
-  .otherwise(template: "Page not found.")
+.when("/",                  templateUrl: "pictures/index", controller: "PicturesController")
+.when('/pictures',          templateUrl: "pictures/index", controller: "PicturesController")
+.when('/pictures/new',      templateUrl: "pictures/new",   controller: "PicturesController")
+.when('/pictures/:id',      templateUrl: "pictures/show",  controller: "PictureController")
+.when('/pictures/:id/edit', templateUrl: "pictures/edit",  controller: "PictureController")
+.otherwise(template: "Page not found.")
 
 
 @photogur.run ['$window', '$templateCache', ($window, $templateCache) ->
